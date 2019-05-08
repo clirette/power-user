@@ -39,3 +39,48 @@ body {
     display: flex;
   }
 }
+
+.landing {
+  $hero-height: 50vh;
+
+  .hero {
+    background: url('../img/team.jpg') no-repeat center center/cover;
+    height: $hero-height;
+    position: relative;
+
+    &-text-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: $light-color;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      line-height: 1.4;
+      white-space: nowrap;
+
+      &__heading {
+        font-size: 5rem;
+        letter-spacing: .3rem;
+        border: .2rem solid $light-color;
+        border-radius: .2rem;
+        width: 50%;
+        padding: .3rem;
+        margin: 2rem auto;
+      }
+
+      &__lead {
+        font-size: 2rem;
+        letter-spacing: .1rem;
+      }
+    }
+  }
+  
+  .dark-overlay {
+    height: $hero-height;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+  }
+}
