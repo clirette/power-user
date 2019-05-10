@@ -2,12 +2,19 @@
   &-primary {
     @include set-background($primary-color);
   }
+
+  &-secondary {
+    @include set-background($secondary-color);
+  }
   &-light {
     @include set-background($light-color);
     border: #ccc 1px solid;
   }
   &-dark {
     @include set-background($dark-color);
+  }
+  &-medium {
+    @include set-background($medium-color);
   }
   &-success {
     @include set-background($success-color);

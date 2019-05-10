@@ -42,12 +42,16 @@ body {
 }
 
 .landing {
-  $hero-height: 50vh;
+  $hero-height: 100vh;
+  $hero-width: 50vh;
+  display: flex;
 
   .hero {
     background: url('../img/team.jpg') no-repeat center center/cover;
     height: $hero-height;
+    // width: $hero-width;
     position: relative;
+    flex: 1;
 
     &-text-box {
       position: absolute;
@@ -83,5 +87,44 @@ body {
     top: 0;
     left: 0;
     background-color: rgba(0,0,0,.7);
+  }
+
+  .info {
+    flex: 1;
+    position: relative;
+
+    .content {
+      // position: absolute;
+      // top: 10%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel {
+      flex: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 5rem auto;
+
+      &-description {
+        text-align: center;
+        padding: 2rem;
+        // margin: 15rem 5rem;
+
+        &__title {
+          font-size: 4rem;
+        }
+
+        &__lead {
+
+        }
+      }
+    }
+
+    .description {
+      flex: 2;
+    }
   }
 }
