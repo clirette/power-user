@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PanelDescription from "./PanelDescription";
+import AboutPanel from "./AboutPanel";
+import ContactPanel from "./ContactPanel";
 
 class Landing extends Component {
   constructor(props) {
@@ -33,7 +35,7 @@ class Landing extends Component {
             <div className="panel">
               <div className="panel__button">
                 <button
-                  className="panel__button--about"
+                  className="btn panel__button--about"
                   data-panel="showAbout"
                   onClick={this.handleClick}
                 >
@@ -42,7 +44,7 @@ class Landing extends Component {
               </div>
               <div className="panel__button">
                 <button
-                  className="panel__button--services"
+                  className="btn panel__button--services"
                   data-panel="showService"
                   onClick={this.handleClick}
                 >
@@ -51,7 +53,7 @@ class Landing extends Component {
               </div>
               <div className="panel__button">
                 <button
-                  className="panel__button--contact"
+                  className="btn panel__button--contact"
                   data-panel="showContact"
                   onClick={this.handleClick}
                 >
@@ -61,24 +63,14 @@ class Landing extends Component {
             </div>
 
             <div className="description">
-              {this.state.showAbout && (
-                <PanelDescription
-                  title="What We're About"
-                  description="Voluptas qui doloremque maxime mollitia aut quos. Assumenda ab culpa ipsam impedit ut. At neque quia quia quo consequatur veniam. Magnam quis quae voluptate hic sint aliquid nemo. Qui eum aut vel similique. Est sapiente voluptatem enim excepturi."
-                />
-              )}
+              {this.state.showAbout && <AboutPanel />}
               {this.state.showService && (
                 <PanelDescription
                   title="What We'll Provide"
                   description="Voluptas qui doloremque maxime mollitia aut quos. Assumenda ab culpa ipsam impedit ut. At neque quia quia quo consequatur veniam. Magnam quis quae voluptate hic sint aliquid nemo. Qui eum aut vel similique. Est sapiente voluptatem enim excepturi."
                 />
               )}
-              {this.state.showContact && (
-                <PanelDescription
-                  title="What Can We Do"
-                  description="Voluptas qui doloremque maxime mollitia aut quos. Assumenda ab culpa ipsam impedit ut. At neque quia quia quo consequatur veniam. Magnam quis quae voluptate hic sint aliquid nemo. Qui eum aut vel similique. Est sapiente voluptatem enim excepturi."
-                />
-              )}
+              {this.state.showContact && <ContactPanel />}
             </div>
           </div>
         </section>

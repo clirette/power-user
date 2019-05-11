@@ -14,6 +14,7 @@ html {
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
+  overflow: hidden;
 }
 
 .nav {
@@ -94,37 +95,55 @@ body {
     position: relative;
 
     .content {
-      // position: absolute;
-      // top: 10%;
-      height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
     .panel {
-      flex: 1;
       display: flex;
       justify-content: space-around;
-      align-items: center;
       margin: 5rem auto;
+      width: 100%;
 
       &-description {
         text-align: center;
         padding: 2rem;
-        // margin: 15rem 5rem;
+        height: 100vh;
+        
 
         &__title {
           font-size: 4rem;
         }
 
         &__lead {
-
+          text-align: left;
         }
       }
     }
 
     .description {
-      flex: 2;
+      // flex: 15;
+    }
+
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item--name,
+      &-item--email {
+        flex: 1;
+        flex-wrap: 50%;
+        text-align: left;
+      }
+
+      &-item__text {
+        display: block
+      }
+
+      &-item--message {
+        flex: 0;
+        text-align: left;
+      }
     }
   }
 }
